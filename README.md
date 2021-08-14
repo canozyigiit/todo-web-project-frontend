@@ -22,10 +22,6 @@ Now Ui Kit Angular
 ├── CHANGELOG.md
 ├── README.md
 ├── angular.json
-├── documentation
-│   ├── css
-│   ├── js
-│   └── tutorial-components.html
 ├── e2e
 ├── karma.conf.js
 ├── package-lock.json
