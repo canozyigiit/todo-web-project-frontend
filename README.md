@@ -1,6 +1,9 @@
 
 
-
+## Todo Page
+![Home](https://github.com/canozyigiit/ToDoWebProjectAngular/blob/master/src/assets/img/toDoPage.png)
+## Login Page
+![Login](https://github.com/canozyigiit/ToDoWebProjectAngular/blob/master/src/assets/img/loginPage.png)
 ## Terminal Commands
 
 1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
