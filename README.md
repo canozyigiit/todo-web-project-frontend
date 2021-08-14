@@ -100,3 +100,5 @@ Social Media:
 Linkedin: <https://www.linkedin.com/in/muhammet-can-%C3%B6zyi%C4%9Fit-090b34218/>
 
 Backend: <https://github.com/canozyigiit/ToDoWepProject-Backend>
+
+Video: <https://www.youtube.com/watch?v=0wvqyHud7cs&t=9s>
