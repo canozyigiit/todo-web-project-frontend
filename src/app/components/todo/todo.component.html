@@ -1,0 +1,108 @@
+<div class="wrapper">
+  <div class="page-header clear-filter" filter-color="orange">
+    <div  class="container">
+      <div style="background-color: transparent;" class="section section-tabs">
+        <h3 style="margin-top: 20px;" class="category">Todos</h3>
+        <div class="container">
+          <div style="margin-top: 10px;" class="row">
+            <div class=" col-md-3  ml-auto  mr-auto ">
+
+              <ul class="list-group">
+
+                <button class="btn btn-danger" (click)="GetTodos()">
+                  <i class="fi-rr-caret-right"></i> Bütün Todolar
+                </button>
+                <button class="btn btn-danger" (click)="GetAllIsEndedTrue()">
+                  <i class="fi-rr-caret-right"></i> Tamamlanmış Todolar
+                </button>
+                <button class="btn btn-danger" (click)="GetAllIsEndedFalse()">
+                  <i class="fi-rr-caret-right"></i> Tamamlanmamış Todolar
+                </button>
+                <button class="btn btn-danger" (click)="GetAllIsAppointedTrue()">
+                  <i class="fi-rr-caret-right"></i> Atanmış Todolar
+                </button>
+                <button class="btn btn-danger" (click)="GetAllIsAppointedFalse()">
+                  <i class="fi-rr-caret-right"></i> Atanmamaış Todolar
+                </button>
+              </ul>
+
+            </div>
+
+            <div class="col-md-9 ml-auto mr-auto ">
+
+              <div class="mb-3">
+
+                <input type="text" class="form-control" id="filterText" [(ngModel)]="filterText"
+                  placeholder="Arama İfadesi Giriniz">
+              </div>
+              <!-- <div *ngIf="filterText.length>1" class="alert" style="background-color: #f964328c;">
+                "{{filterText}}" aranan terim
+              </div> -->
+              <div *ngFor="let todo of todos | filter:filterText ">
+                <div class="card">
+                  <div class="nav-tabs-navigation" data-tabs-color="orange">
+                    <div class="nav-tabs-wrapper">
+                      <ngb-tabset [justify]="'center'" class="text-center">
+                        <ngb-tab title="Tanım">
+                          <ng-template ngbTabContent>
+                            <p style="color: black; font-size: large;"> <i class="fi-rr-play"></i>
+                              {{todo.description  }} </p>
+                          </ng-template>
+                        </ngb-tab>
+                        <ngb-tab title="Çalışan">
+                          <ng-template ngbTabContent>
+                            <p style="color: black; font-size: large;"><i class="fi-rr-user"></i> &nbsp;
+                              ÇalışanId: {{todo.employeeId}} | {{todo.employeeFirstName |uppercase}}
+                              {{todo.employeeLastName |uppercase}}</p>
+                          </ng-template>
+                        </ngb-tab>
+                        <ngb-tab title="Yetkili">
+                          <ng-template ngbTabContent>
+                            <p style="color: black; font-size: large;"><i class="fi-rr-user"></i> &nbsp;
+                              ManagerId: {{todo.managerId}} | {{todo.managerFirstName |uppercase}}
+                              {{todo.managerLastName
+                              |uppercase}}</p>
+                          </ng-template>
+                        </ngb-tab>
+                        <ngb-tab title="Detay">
+                          <ng-template ngbTabContent>
+                            <ul>
+                              <li style="color: black; font-size: large;" class="list-group ">
+                                <p> <i class="fi-rr-calendar"></i> &nbsp; Oluşturulma Tarihi: {{todo.createdDate |
+                                  date:"dd/MM/yyyy"}}</p>
+                              </li>
+                              <li style="color: black; font-size: large;" class="list-group">
+                                <p> <i class="fi-rr-calendar"></i> &nbsp; Atanma Tarihi: {{todo.appointedDate |
+                                  date:"dd/MM/yyyy"}} </p>
+                              </li>
+                              <li style="color: black; font-size: large;" class="list-group">Atanmış mı ? :
+                                {{todo.isAppointed }}</li>
+                              <li style="color: black; font-size: large;" class="list-group">Bitmiş mi ? :
+                                {{todo.isEnded}}</li>
+                            </ul>
+                          </ng-template>
+                        </ngb-tab>
+                        <ngb-tab title="İşlem" *ngIf="isManager() == true ">
+                          <ng-template ngbTabContent>
+                            <button class="btn btn-danger" (click)="toDoDelete(todo)">
+                              Todo'yu Sil
+                            </button>
+                            <app-todo-update toDoId = {{todo.toDoId}}></app-todo-update>
+                          </ng-template>
+                        </ngb-tab>
+                      </ngb-tabset>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

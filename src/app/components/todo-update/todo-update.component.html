@@ -1,0 +1,30 @@
+<button  class="btn btn-danger" (click)="open(classic,'' , '')">
+    Todo'yu Güncelle
+</button>
+
+<ng-template #classic let-c="close" let-d="dismiss">
+    <div class="modal-header justify-content-center">
+        <button type="button" class="close" (click)="d('Cross click')">
+            <i class="now-ui-icons ui-1_simple-remove"></i>
+        </button>
+        <h4 class="title title-up"> <i class="fi-rr-add"></i> Todo'yu Güncelle</h4>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="todoUpdateForm">
+            <div>
+                <div class="form-group">
+                    <input type="text" value="" id="Description" formControlName="Description" placeholder="Tanım:"
+                        class="form-control" />
+                        <br>
+                        <input type="number" value="" id="EmployeeId" formControlName="EmployeeId"  placeholder="Çalışan Id:"
+                        class="form-control" />
+                </div>
+               
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="c('Close click')">Kapat</button>
+        <button type="button" class="btn btn-danger" (click)="Update()"  >Güncelle</button>
+    </div>
+</ng-template>
