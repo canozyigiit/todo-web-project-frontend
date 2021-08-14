@@ -1,6 +1,9 @@
 
 
-
+## Todo Page
+![Home](https://github.com/canozyigiit/ToDoWebProjectAngular/blob/master/src/assets/img/toDoPage.png)
+## Login Page
+![Login](https://github.com/canozyigiit/ToDoWebProjectAngular/blob/master/src/assets/img/loginPage.png)
 ## Terminal Commands
 
 1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
@@ -19,10 +22,6 @@ Now Ui Kit Angular
 ├── CHANGELOG.md
 ├── README.md
 ├── angular.json
-├── documentation
-│   ├── css
-│   ├── js
-│   └── tutorial-components.html
 ├── e2e
 ├── karma.conf.js
 ├── package-lock.json
@@ -100,4 +99,6 @@ Social Media:
 
 Linkedin: <https://www.linkedin.com/in/muhammet-can-%C3%B6zyi%C4%9Fit-090b34218/>
 
-Backend: <https://github.com/canozyigiit/ToDoWepProject>
+Backend: <https://github.com/canozyigiit/ToDoWepProject-Backend>
+
+Video: <https://www.youtube.com/watch?v=0wvqyHud7cs&t=9s>
