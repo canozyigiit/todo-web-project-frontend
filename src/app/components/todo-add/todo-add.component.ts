@@ -64,10 +64,15 @@ export class TodoAddComponent implements OnInit {
     getManagerId() {
        
               let userId = this.localStorageService.getItem("userId")
-        this.managerService.getUserById(userId).subscribe(data => {
+              if (userId ==null) {
+                  return
+              } else {
+                   this.managerService.getUserById(userId).subscribe(data => {
             this.localStorageService.setItem("manager", data.data)
 
         })
+              }
+       
         
       
     }

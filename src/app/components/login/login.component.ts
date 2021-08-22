@@ -85,8 +85,10 @@ export class LoginComponent implements OnInit {
     setClaim(email) {
         //TODO:Refactoring
         this.userOperationClaimService.GetByUserClaimEmail(email).subscribe(data => {
-            if (data.data.operationClaimId !== null) {
-                localStorage.setItem("claim", "user")
+          
+            if (data.data == null) {
+              
+               return;
             }
             if (data.data.operationClaimId == 1) {
                 localStorage.setItem("claim", "admin")
@@ -100,7 +102,12 @@ export class LoginComponent implements OnInit {
 
     getManager(mail) {
         this.managerService.getByMail(mail).subscribe(data => {
-            this.localStorageService.setItem("manager", data.data)
+            if (data.data == null) {
+                return;
+            } else {
+                  this.localStorageService.setItem("manager", data.data)
+            }
+          
         })
 
     }
